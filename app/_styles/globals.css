@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+
+.rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-background-color: theme("colors.accent.600") !important;
+  margin: 0 !important;
+}
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; Color of the track */
+  background-color: theme("colors.primary.950");
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: theme("colors.primary.800"); /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.primary.900"); /* Color when hovered */
+}
+
+/* Style the scrollbar buttons */
+::-webkit-scrollbar-button {
+  background: theme("colors.primary.950"); /*Color of the buttons*/
+  /* background-color: var(--color-grey-100); */
+}
+
+/* Style the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: var(--color-grey-0); /*Color of the corner*/
+}
