@@ -12,8 +12,8 @@ export const metadata = {
 export default async function Page() {
   const cabins = await getCabins();
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center overflow-hidden">
-      <div className="col-span-3">
+    <div className="grid grid-cols-5 max-md:grid-cols-1 max-lg:grid-cols-6 gap-x-24 max-md:gap-x-0 gap-y-32 text-lg items-center overflow-hidden">
+      <div className="col-span-3 max-md:row-span-2">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
         </h1>
@@ -40,7 +40,7 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-2 max-lg:col-span-3 max-md:row-span-1">
         <Image
           src={about1}
           alt="Family sitting around a fire pit in front of cabin"
@@ -48,7 +48,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="relative aspect-square col-span-2">
+      <div className="relative aspect-square col-span-2 max-lg:col-span-3 max-md:row-span-3">
         <Image
           src="/about-2.jpg"
           fill
@@ -57,7 +57,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-3">
+      <div className="col-span-3 max-md:row-span-4">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Managed by our family since 1962
         </h1>

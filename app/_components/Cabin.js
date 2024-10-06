@@ -6,18 +6,22 @@ function Cabin({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image, description } =
     cabin;
   return (
-    <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
-      <div className="relative scale-[1.15] -translate-x-3">
+    <div className="grid max-lg:grid-cols-1 lg:grid-cols-[3fr_4fr]  max-lg:gap-8 lg:gap-20  max-lg:p-2 lg:py-4 lg:px-10  max-lg:mb-16 lg:mb-24 rounded-md  border border-primary-800">
+      <div className="relative max-sm:m-1 max-lg:m-2 max-lg:aspect-video lg:aspect-square lg:-translate-x-6">
         <Image
           fill
-          className="object-cover"
+          className="object-cover rounded-md"
           src={image}
           alt={`Cabin ${name}`}
         />
       </div>
-
+      {/* "text-accent-100 font-black max-sm:text-3xl max-lg:text-5xl lg:text-7xl
+      bg-primary-950 rounded-bl-3xl mb-2 max-sm:p-1 max-lg:p-2 lg:mb-4 lg:p-4
+      lg:pb-2 lg:translate-x-[-254px] lg:w-[150%] " 
+      "relative max-sm:m-1 max-lg:m-2 max-lg:aspect-video lg:aspect-square lg:-translate-x-6"
+      "grid max-lg:grid-cols-1 lg:grid-cols-[3fr_4fr]  max-lg:gap-8 lg:gap-20  max-lg:p-2 lg:py-4 lg:px-10  max-lg:mb-16 lg:mb-24 rounded-md  ring-1 ring-primary-100  shadow-sm shadow-primary-100  border border-primary-800  */}
       <div>
-        <h3 className="text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-accent-100 font-black  max-sm:text-3xl max-lg:text-5xl lg:text-7xl    bg-primary-950 rounded-bl-3xl mb-2 max-sm:p-1 max-lg:p-2 lg:mb-4  lg:p-4 lg:pb-2 lg:translate-x-[-254px]  lg:w-[150%] ">
           Cabin {name}
         </h3>
 

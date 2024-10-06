@@ -4,10 +4,12 @@ import { differenceInDays } from "date-fns";
 import { useReservation } from "./ReservationContext";
 import { createBooking } from "../_lib/actions";
 import SubmitButton from "./SubmitButton";
+import { useResponsive } from "../_lib/useResponsive";
 
 function ReservationForm({ cabin, user, settings }) {
+  const index = useResponsive([640]);
   // CHANGE
-
+  const name = user.name.split(" ").at(0);
   const { breakfastPrice } = settings;
   const { maxCapacity, regularPrice, discount, id } = cabin;
   const { range, resetRange } = useReservation();
@@ -33,7 +35,7 @@ function ReservationForm({ cabin, user, settings }) {
 
   return (
     <div className="scale-[1.01]">
-      <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
+      <div className="bg-primary-800 text-primary-300 max-sm:px-8 sm:px-16 py-2 flex justify-between items-center">
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
@@ -44,7 +46,7 @@ function ReservationForm({ cabin, user, settings }) {
             src={user.image}
             alt={user.name}
           />
-          <p>{user.name}</p>
+          <p>{index ? user.name : name}</p>
         </div>
       </div>
 
@@ -54,7 +56,7 @@ function ReservationForm({ cabin, user, settings }) {
           resetRange();
         }}
         // action={createBookingWithData}
-        className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col"
+        className="bg-primary-900 py-10 sm:px-16 max-sm:px-8 text-lg flex gap-5 flex-col"
       >
         <div className="space-y-2">
           <label htmlFor="numGuests">How many guests?</label>
@@ -96,7 +98,7 @@ function ReservationForm({ cabin, user, settings }) {
           />
           <label htmlFor="hasBreakfast">Do you want breakfast</label>
         </div>
-        <div className="flex justify-end items-center gap-6">
+        <div className="flex sm:flex-row-reverse group justify-end max-sm:flex-col-reverse items-center max-sm:gap-4 sm:gap-6">
           {!(startDate && endDate) ? (
             <p className="text-primary-300 text-base">
               Start by selecting dates

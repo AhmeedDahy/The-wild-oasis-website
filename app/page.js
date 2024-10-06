@@ -16,7 +16,7 @@ export default function Page() {
       />
 
       <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
+        <h1 className="max-sm:text-5xl max-md:text-6xl max-lg:text-7xl lg:text-8xl text-primary-50  max-sm:mb-[62vw] max-md:mb-[48vw] max-lg:mb-[24vw] max-xl:mb-[26vw] max-2xl:mb-[4vw] 2xl:mb-[8vw] tracking-tight  font-normall">
           Welcome to paradise.
         </h1>
         <Link
