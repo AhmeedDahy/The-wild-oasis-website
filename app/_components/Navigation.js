@@ -15,16 +15,16 @@ export default function Navigation({ session }) {
           className="z-50 inline-flex h-12 w-12 items-center justify-center rounded-full"
         >
           {!nav ? (
-            <Bars3Icon className="w-8 h-8 text-accent-200" />
+            <Bars3Icon className="w-8 h-8" />
           ) : (
-            <XMarkIcon className="w-8 h-8 text-accent-200" />
+            <XMarkIcon className="w-8 h-8" />
           )}
         </button>
       </nav>
 
       {/* Full screen navigation for mobile */}
       <nav
-        className={`text-center fixed inset-0 bg-primary-800 text-accent-200 text-xl flex flex-col items-center justify-center transform ${
+        className={`text-center fixed inset-0 bg-primary-800 text-xl flex flex-col items-center justify-center transform ${
           nav ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in z-40 backdrop-blur-5xl md:hidden`}
       >
