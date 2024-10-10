@@ -51,6 +51,16 @@ export default async function Page() {
         />
       </div>
 
+      {/* Second Image Block */}
+      <div className="relative aspect-square col-span-2 max-lg:col-span-3 max-md:order-3 max-md:row-span-3">
+        <Image
+          src="/about-2.jpg"
+          fill
+          alt="Family that manages The Wild Oasis"
+          className="object-cover"
+        />
+      </div>
+
       {/* Second Text Block */}
       <div className="col-span-3 max-md:order-4 max-md:row-span-4">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
@@ -83,16 +93,6 @@ export default async function Page() {
             </Link>
           </div>
         </div>
-      </div>
-
-      {/* Second Image Block */}
-      <div className="relative aspect-square col-span-2 max-lg:col-span-3 max-md:order-3 max-md:row-span-3">
-        <Image
-          src="/about-2.jpg"
-          fill
-          alt="Family that manages The Wild Oasis"
-          className="object-cover"
-        />
       </div>
     </div>
   );
