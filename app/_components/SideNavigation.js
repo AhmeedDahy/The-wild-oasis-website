@@ -62,7 +62,7 @@ function SideNavigation() {
       </nav>
 
       {/* Bottom Navigation for Mobile */}
-      <nav className="fixed bottom-0 left-0 right-0 md:hidden bg-primary-1000 border-t border-primary-900 text-lg z-50">
+      <nav className="fixed bottom-0 left-0 right-0 md:hidden bg-primary-1000 border-t border-primary-900 max-md:text-xs text-lg z-50">
         <ul className="flex justify-between items-center">
           {navLinks.map((link) => (
             <li key={link.name} className="flex-1">
