@@ -39,8 +39,8 @@ function SideNavigation() {
   return (
     <>
       {/* Side Navigation for Desktop */}
-      <nav className="border-r border-primary-900 hidden md:flex flex-col h-full text-lg">
-        <ul className="flex flex-col gap-2">
+      <nav className="border-r border-primary-900 hidden md:flex flex-col ">
+        <ul className="flex flex-col gap-2 h-full text-lg">
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link
